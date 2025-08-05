@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -185.4, "left": -160.4, "attrs": {} },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 85.26,
+      "left": 140.9,
+      "rotate": 270,
+      "attrs": { "env": "micropython-20231227-v1.22.0" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 73.2,
+      "left": -303.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 63.6,
+      "left": -226.6,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 54,
+      "left": -140.2,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -53.65,
+      "left": 9.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -44.05,
+      "left": -76.8,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -63.25,
+      "left": 86.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "led2:A", "r1:1", "gold", [ "h48", "v-57.6" ] ],
+    [ "led2:C", "esp:GND.1", "black", [ "v172.8", "h374.8" ] ],
+    [ "r1:2", "esp:17", "gold", [ "h142.8", "v192" ] ],
+    [ "led3:C", "esp:GND.1", "black", [ "v153.6", "h288.4" ] ],
+    [ "led3:A", "r2:1", "green", [ "h28.8", "v-134.4" ] ],
+    [ "r2:2", "esp:16", "green", [ "h238.8", "v182.4" ] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v172.8", "h461.2" ] ],
+    [ "led1:A", "r3:1", "red", [ "h28.8", "v-163.2" ] ],
+    [ "r3:2", "esp:18", "red", [ "h46.8", "v201.6" ] ],
+    [ "r3:1", "bb1:24b.g", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:30b.g", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:7b.i", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:13b.i", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:16b.h", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:22b.h", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
