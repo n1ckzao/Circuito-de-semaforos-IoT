@@ -3,7 +3,8 @@
 
 ---
 
-Circuito feito no site Wokwi Online, uma atividade de IoT com o objetivo de aplicar o conhecimento dos componentes básicos em INTERNET INDUSTRIAL DAS COISAS (IIoT)
+Circuito feito no site Wokwi Online, uma atividade de IoT na unidade do Senai de Jandira com o objetivo de aplicar o conhecimento dos componentes básicos em INTERNET INDUSTRIAL DAS COISAS (IIoT)
 
 ## Nicolas Lima Meira
+
 
